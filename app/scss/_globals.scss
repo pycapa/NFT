@@ -16,3 +16,11 @@ body{
     background-color: $veryDarkBlueMain;
     color: $softBlue;
 }
+
+
+.hide-for-mobile{
+    // hide for tables and mobile
+    @include breakepoint-down('small'){
+        margin-top: 2rem!important;
+    }
+}

@@ -11,19 +11,101 @@
         position: relative;
         margin-top: 9.375rem;
         padding: 1.5rem;
-        border-radius: 18px;
-
-        img{
+        border-radius: 18px;   
+    }
+    &__card-image{
+        padding-bottom: 1rem;
+        position: relative;
+        .icon{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            opacity: 0;
+        }
+        .card-image{
             width: 18.75rem;
             height: 18.75rem;
             border-radius: 10px;
         }
-        h2{
-            color: $white;
-            font-size: 20px;
+        .card-image:hover{
+            color: $cyan;
+            cursor: pointer;
         }
+        .overlay{
+            position: absolute;
+            top:0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            transition: .5s ease;
+            background-color:$cyan;
+            opacity: 1;
+            border-radius: 10px;
+            padding-bottom: 1rem;
+            width: 18.75rem;
+            height: 18.75rem;
+            opacity: 0;
+        }
+
+    }
+    &__card-image:hover {
+        cursor: pointer;
+    }
+    &__card-image:hover .overlay{
+        opacity: 0.5;
+    }
+
+    &__card-image:hover .icon{
+        opacity: 1;
     }
     &__p{
-        margin-top: 0;
+        margin-top: 1rem;
+    }
+    .card-data{
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        border-bottom: 1px solid ;
+        padding-bottom: 1.125rem;
+
+        &__coin{
+            height: 1.25rem;
+
+            color:$cyan;
+        }
+        &_time{
+            height: 1.125rem;
+
+
+        }
+    }
+    .creator{
+        display: flex;
+        margin-top: 1rem;
+        align-items: center;
+        p{
+            margin-left: 1rem;
+        }
+        span:nth-child(even){
+            color: $white;
+        }
+        img{
+            width: 2.125rem;
+            height: 2.125rem;
+            border: 1px solid $white;
+            border-radius: 50%;
+        }
+    }
+    .text-hover:hover{
+        color:$cyan;
+    }
+    .links{
+        text-decoration: none;
+        color: $white;
+        cursor: pointer;
+        font-size: 20px;
     }
 }

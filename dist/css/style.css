@@ -19,6 +19,12 @@ body {
   color: #8bacda;
 }
 
+@media (max-width: 39.937em) {
+  .hide-for-mobile {
+    margin-top: 2rem !important;
+  }
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -48,18 +54,120 @@ body {
   border-radius: 18px;
 }
 
-.container__card img {
+.container__card-image {
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.container__card-image .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.container__card-image .card-image {
   width: 18.75rem;
   height: 18.75rem;
   border-radius: 10px;
 }
 
-.container__card h2 {
-  color: white;
-  font-size: 20px;
+.container__card-image .card-image:hover {
+  color: #00fff7;
+  cursor: pointer;
+}
+
+.container__card-image .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  background-color: #00fff7;
+  opacity: 1;
+  border-radius: 10px;
+  padding-bottom: 1rem;
+  width: 18.75rem;
+  height: 18.75rem;
+  opacity: 0;
+}
+
+.container__card-image:hover {
+  cursor: pointer;
+}
+
+.container__card-image:hover .overlay {
+  opacity: 0.5;
+}
+
+.container__card-image:hover .icon {
+  opacity: 1;
 }
 
 .container__p {
-  margin-top: 0;
+  margin-top: 1rem;
+}
+
+.container .card-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid;
+  padding-bottom: 1.125rem;
+}
+
+.container .card-data__coin {
+  height: 1.25rem;
+  color: #00fff7;
+}
+
+.container .card-data_time {
+  height: 1.125rem;
+}
+
+.container .creator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .creator p {
+  margin-left: 1rem;
+}
+
+.container .creator span:nth-child(even) {
+  color: white;
+}
+
+.container .creator img {
+  width: 2.125rem;
+  height: 2.125rem;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.container .text-hover:hover {
+  color: #00fff7;
+}
+
+.container .links {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
 }
 /*# sourceMappingURL=style.css.map */
